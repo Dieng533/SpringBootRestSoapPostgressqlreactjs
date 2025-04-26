@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.bibliotheque.com/soap"
+           xmlns:tns="http://www.bibliotheque.com/soap"
+           elementFormDefault="qualified">
+
+    <!-- Requête pour ajouter un livre -->
+    <xs:element name="ajouterLivreRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="titre" type="xs:string"/>
+                <xs:element name="auteur" type="xs:string"/>
+                <xs:element name="isbn" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Réponse pour ajouter un livre -->
+    <xs:element name="ajouterLivreResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="message" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
